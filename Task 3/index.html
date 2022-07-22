@@ -1,0 +1,34 @@
+<!-- Задание 3
+
+1.  Реализовать чат на основе эхо-сервера wss://echo-ws-service.herokuapp.com.
+    Интерфейс состоит из input, куда вводится текст сообщения, и кнопки «Отправить».
+    При клике на кнопку «Отправить» сообщение должно появляться в окне переписки.
+    Эхо-сервер будет отвечать вам тем же сообщением, его также необходимо выводить в чат:
+
+2.  Добавить в чат механизм отправки гео-локации:
+    При клике на кнопку «Гео-локация» необходимо отправить данные серверу и в чат вывести ссылку на https://www.openstreetmap.org/ с вашей гео-локацией. 
+    Сообщение, которое отправит обратно эхо-сервер, не выводить.  -->
+
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div class="container">
+        <form class="form" onsubmit="handleSubmit(); return false;">
+          <input class="form_input" id="form_input" placeholder="Здесь вводится текст сообщения">
+          <button class="form_button" type="submit">Отправить</button>
+          <button class="form_button" onclick="defineGeolocation()">Геолокация</button>
+        </form>
+        <div id="form_chat" class="form_chat"></div>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="index.js"></script>
+  </body>
+</html>
